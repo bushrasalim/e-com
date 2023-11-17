@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <%- include("../component/head",{data:{title:"product add"}});%>
+</head>
+
+<body>
+    <div class="container">
+        <div class="offset-sm-3 col-6 ">
+            <form action="/product/add" method="post">
+                <div class="mb-3 ">
+                    <label class="form-label ">Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="please enter product name">
+                </div>
+                <div class="mb-3 ">
+                    <label class="form-label">Price</label>
+                    <input type="text" name="price" class="form-control" placeholder="please enter price">
+
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <input type="text" name="description" class="form-control" placeholder="please enter description">
+                </div>
+                <input type="submit" class="btn btn-primary" value="add product">
+            </form>
+        </div>
+    </div>
+    <%- include("../component/footer")%>
+</body>
+
+</html>

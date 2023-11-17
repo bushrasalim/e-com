@@ -1,0 +1,6 @@
+{
+    "scm.countBadge": "focused",
+    "workbench.editor.decorations.colors": true,
+    "editor.guides.highlightActiveIndentation": "always",
+    "testing.countBadge": "passed"
+}

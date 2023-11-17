@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <%- include("../component/head",{data:{title:"category update"}});%>
+</head>
+
+<body>
+    <%- include("../component/menu");%>
+        <div class="container">
+            <div class="offset-sm-3 col-6 ">
+                <form action="/category/<%=category.id%>" method="post">
+                    <div class="mb-3 ">
+                        <label class="form-label ">id</label>
+                        <input type="text" name="id" value="<%= category.id%>" class="form-control"
+                            placeholder="please enter id">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">name</label>
+                        <input type="text" name="name" value="<%= category.name%>" class="form-control"
+                            placeholder="please enter name">
+
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">image</label>
+                        <input type="image" name="image" class="form-control" placeholder="please enter image"
+                            value="<%= category.image%>" required>
+
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="update category">
+                </form>
+            </div>
+        </div>
+        <%- include("../component/footer")%>
+</body>
+
+</html>

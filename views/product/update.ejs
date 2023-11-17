@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <%- include("../component/head",{data:{title:"product update"}});%>
+</head>
+
+<body>
+    <%- include("../component/menu");%>
+        <div class="container">
+            <div class="offset-sm-3 col-6 ">
+                <form action="/product/<%=product.id%>" method="post">
+                    <div class="mb-3 ">
+                        <label class="form-label ">Name</label>
+                        <input type="text" name="name" value="<%= product.name%>" class="form-control"
+                            placeholder="please enter product name">
+                    </div>
+                    <div class="mb-3 ">
+                        <label class="form-label">Price</label>
+                        <input type="text" name="price" value="<%= product.price%>" class="form-control"
+                            placeholder="please enter price">
+
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">description</label>
+                        <input type="text" name="description" class="form-control"
+                            placeholder="please enter description" value="<%=product.description%>" required>
+
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="update product">
+                </form>
+            </div>
+        </div>
+        <%- include("../component/footer")%>
+</body>
+
+</html>

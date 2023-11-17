@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../component/head",{data:{title:'category list'}})%>
+</head>
+
+<body>
+    <%- include("../component/menu")%>
+        <div class="container">
+            <div class="row pt-5 ">
+
+
+                <table class="table table-bordered table-hover ">
+                    <tr>
+                        <th> name </th>
+                        <td>
+                            <%= category.name%>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-sm-12 pt-4 ">
+            <a href="/category/update/<%= category.id %>" class="btn btn-primary ">update</a>
+            <form method="delete" action="/category/<%= category.id %>">
+                <input type="submit" value="delete" class="btn btn-danger mt-4 ">
+            </form>
+        </div>
+        <%- include('../component/footer')%>
+</body>
+
+</html>

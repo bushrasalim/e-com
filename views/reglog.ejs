@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("component/head.ejs",{data:{title:"product add"}});%>
+
+</head>
+
+<body>
+    <div class="container ">
+        <div class="row " id="register-div">
+            <div class="offset-sm-3 col-sm-6 ">
+                <form action="/registration" method="post">
+                    <input type="text" name="userName" placeholder="enter your name" required><br>
+                    <input type="email" name="email" placeholder="enter your email" required><br>
+                    <input type="text" name="contact" placeholder="enter your contact" required><br>
+                    <input type="password" name="password" placeholder="enter your password" required><br>
+                    <input type="submit">
+                </form>
+            </div>
+
+        </div>
+
+        <div class="row " id="login-div">
+            <div class="offset-sm-3  col-sm-6 ">
+                <form action="login" method="post">
+                    <input type="email" name="email" placeholder="enter your email" value="xx@gmail.com"><br>
+                    <input type="password" name="password" placeholder="enter your password" value="1234567890"><br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12  text-center pt-5 ">
+            <button class="btn btn-primary " id="register">
+                register
+            </button>
+            <button class="btn btn-primary " id="login">
+                login
+            </button>
+            <a href="/forgetpassword">forget password</a>
+        </div>
+    </div>
+    <%- include("component/footer")%>
+
+</body>
+
+</html>
